@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchView" customModule="Pokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="View" destination="iN0-l3-epB" id="eZG-Kz-v2h"/>
+                <outlet property="lbl" destination="zbA-s1-Xet" id="WeN-Jh-whU"/>
+                <outlet property="searchV" destination="apj-Dp-AnF" id="Nyh-uf-Wml"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap-1" translatesAutoresizingMaskIntoConstraints="NO" id="xF3-Rl-ZAA">
+                    <rect key="frame" x="261" y="-30" width="183" height="183"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Pokemon are you looking for" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbA-s1-Xet">
+                    <rect key="frame" x="20" y="50" width="374" height="84"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Pokemon name" translatesAutoresizingMaskIntoConstraints="NO" id="apj-Dp-AnF">
+                    <rect key="frame" x="0.0" y="193" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xF3-Rl-ZAA" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" constant="30" id="Ak5-Tf-xlh"/>
+                <constraint firstItem="apj-Dp-AnF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EUj-vn-f84"/>
+                <constraint firstItem="zbA-s1-Xet" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Ekd-NI-NY4"/>
+                <constraint firstAttribute="trailing" secondItem="apj-Dp-AnF" secondAttribute="trailing" id="JtE-VH-PuL"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="apj-Dp-AnF" secondAttribute="bottom" constant="40" id="buH-Jd-4yZ"/>
+                <constraint firstItem="zbA-s1-Xet" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="k0z-3D-yIG"/>
+                <constraint firstItem="xF3-Rl-ZAA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-30" id="ujO-ai-ZPa"/>
+                <constraint firstAttribute="trailing" secondItem="zbA-s1-Xet" secondAttribute="trailing" constant="20" id="v83-S2-d4b"/>
+                <constraint firstItem="apj-Dp-AnF" firstAttribute="top" secondItem="xF3-Rl-ZAA" secondAttribute="bottom" constant="40" id="v9C-kM-Ua4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="102.89855072463769" y="81.696428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bitmap-1" width="183" height="183"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
