@@ -15,10 +15,11 @@ class PokemonCell: UITableViewCell {
     @IBOutlet weak var typePokemon: UILabel!
     @IBOutlet weak var numberList: UILabel!
     @IBOutlet weak var label: UIImageView!
+    @IBOutlet weak var orderLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        view.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,7 +36,7 @@ class PokemonCell: UITableViewCell {
         pokemonName.text = pokemon.name
         typePokemon.text = type
         label?.sd_setImage(with: imageUrl, completed: nil)
-        numberList.text = String("#\(pokemon.order)")
+        orderLabel.text = String("#\(pokemon.order ?? 0)")
         view.backgroundColor = UIColor.TypeColors.getColor(fromType: type )
     }
     

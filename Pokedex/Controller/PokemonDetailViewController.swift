@@ -11,6 +11,7 @@ import Toaster
 
 class PokemonDetailViewController: UIViewController {
 
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelOrder: UILabel!
     @IBOutlet weak var labelType: UILabel!
@@ -28,8 +29,6 @@ class PokemonDetailViewController: UIViewController {
         setupUI()
     }
     
-//    let pokemon: Pokemon = Pokemon(name: "Charizard", order: 35, type: "Fire", stat: [("Hp", 100 ), ("Attack", 50), ("Defense", 10)], image: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png")
-    
     func setupUI() {
         //MARK: - Setting Labels
         addButton.isHidden = showAddButton
@@ -38,6 +37,7 @@ class PokemonDetailViewController: UIViewController {
         labelOrder.text = "#\(pokemon?.order ?? 0)"
         labelType.text = type
         vStats.backgroundColor = UIColor.TypeColors.getColor(fromType: type)
+        mainView.backgroundColor = UIColor.TypeColors.getColor(fromType: type)
         //MARK: - Setting up our image
         let url = URL(string: pokemon?.sprites?.frontDefault ?? "")
         

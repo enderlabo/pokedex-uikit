@@ -27,7 +27,7 @@ final class NetworkManager {
     func getPokemons(callback: @escaping (PokemonApiResponse) -> Void){
         var urlComponent = URLComponents(string: baseUrl.absoluteString)
         urlComponent?.queryItems = [
-        URLQueryItem(name: "limit", value: "10")
+        URLQueryItem(name: "limit", value: "6")
         ]
         
         let nextUrl = nextPokemonPage != nil ? nextPokemonPage : urlComponent?.url
